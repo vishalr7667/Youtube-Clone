@@ -2,6 +2,9 @@ import express from 'express';
 import cookieParser from 'cookie-parser';
 import cors from "cors";
 import { LIMIT } from './constants.js';
+import { upload } from './middlewares/multer.middleware.js';
+
+
 
 
 const app = express();
