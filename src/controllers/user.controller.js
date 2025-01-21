@@ -256,7 +256,7 @@ const changeCurrentPassword = asyncHandler(async(req, res)=>{
   }
 
   user.password = newPassword;
-  await user.save(validateBeforeSave = false);
+  await user.save({validateBeforeSave : false});
 
   return res.status(200).json(
     new ApiResponse(200, "Password changed successfully")
@@ -356,5 +356,7 @@ const updateUserCoverImage = asyncHandler(async(req,res)=>{
   )
 
 })
+
+
 
 export { registerUser , loginUser, logoutUser, refreshAccessToken, getCurrentUser, changeCurrentPassword, updateAccountDetails, updateUserAvatar, updateUserCoverImage };
