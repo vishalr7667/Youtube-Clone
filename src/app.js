@@ -22,6 +22,7 @@ import userRouter from './routes/user.routes.js'
 app.use("/api/v1/users", userRouter);
 
 
+
 // http://localhost:8000/api/v1/users/userRouter (which is defined in user route file and the path use in this file is treated as prefix)
 
 export {app}
